@@ -26,6 +26,9 @@
 <script>
 export default {
   props: ["cardheader", "users"],
+  data: {
+    user: "user",
+  },
   mounted() {
     console.log("Component mounted");
   },

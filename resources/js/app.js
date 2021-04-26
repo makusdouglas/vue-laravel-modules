@@ -21,12 +21,32 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+Vue.component('default-layout', require('./layout/DefaultLayout.vue').default)
+
+// const icons = require.context('vue-material-design-icons/', true, /\.vue$/i);
+
+// icons.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], icons(key).default))
+
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
 });
+
+// Inertia
+
+// import { createApp, h } from 'vue';
+// import { App, plugin } from '@inertiajs/inertia-vue3';
+// import { InertiaProgress } from '@inertiajs/progress';
+
+// const el = document.getElementById('root');
+
+// createApp({
+//     render: () => h(App, {
+//         initialPage: JSON.parse(el.dataset.page),
+//         resolveComponent: name => import(`./Pages/${name}`).then(module => module.default),
+//     })
+// })
+//     .use(plugin).mount(el)
+
+// InertiaProgress.init()

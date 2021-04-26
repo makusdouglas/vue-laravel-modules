@@ -21,10 +21,13 @@ $user2 = [
 
 ?>
 <div id="App">
-    <app-component
+    <default-layout>
+        <app-component
         cardheader="Módulo {{config('application.name')}}"
         {{-- cardbody="{{$cardBody}}" --}}
         users='{!! json_encode($users) !!}'
-        ></app-component>
+        >
+        </app-component>
+    </default-layout>
 </div>
 
